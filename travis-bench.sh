@@ -50,7 +50,8 @@ fi
 # See https://github.com/PolymerLabs/tachometer
 echo -e "\nBenchmarking ${THIS}\n  versus ${PARENT}\n  and NPM latest\n"
 npx tach \
-  --root=$BENCHMARK_DIR --name=$BENCHMARK_NAME --browser=$BROWSER \
+  $BENCHMARK_NAME
+  --root=$BENCHMARK_DIR --browser=$BROWSER \
   --sample-size=$MIN_SAMPLE_SIZE --horizon=$HORIZON --timeout=$TIMEOUT_MINS \
   --package-version=lit-html/this=lit-html@github:${THIS} \
   --package-version=lit-html/parent=lit-html@github:${PARENT} \
